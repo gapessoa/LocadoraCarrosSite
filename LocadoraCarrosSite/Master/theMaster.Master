@@ -11,6 +11,7 @@
     </asp:ContentPlaceHolder>
     <link href="../Assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../Assets/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../Assets/css/custom_theme.css" rel="stylesheet" />
     <link href="../Assets/css/bootstrap-theme.css" rel="stylesheet" />
     <script src="../Assets/js/jquery-1.10.2.min.js"></script>
     <script src="../Assets/js/bootstrap.min.js"></script>
@@ -49,6 +50,10 @@
             </div>
             <!--/.nav-collapse -->
         </div>
+    </div>
+    <div id="MainContent" class="container">
+        <asp:ContentPlaceHolder ID="cpMainContent" runat="server">
+        </asp:ContentPlaceHolder>
     </div>
 </body>
 </html>
