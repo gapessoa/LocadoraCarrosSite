@@ -69,11 +69,23 @@
     <Content Include="Assets\css\bootstrap-theme.min.css" />
     <Content Include="Assets\css\bootstrap.css" />
     <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="CadastrarMarca.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="ListarMarcas.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="UserControls\SelectMarca.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastrarMarca.aspx.cs">
+      <DependentUpon>CadastrarMarca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastrarMarca.aspx.designer.cs">
+      <DependentUpon>CadastrarMarca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataReaderExtensions.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -96,6 +108,14 @@
       <DependentUpon>theMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="theConn.cs" />
+    <Compile Include="UserControls\SelectMarca.ascx.cs">
+      <DependentUpon>SelectMarca.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SelectMarca.ascx.designer.cs">
+      <DependentUpon>SelectMarca.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Master\theMaster.Master" />
