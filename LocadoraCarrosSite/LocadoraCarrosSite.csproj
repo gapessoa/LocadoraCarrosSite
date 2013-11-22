@@ -70,8 +70,10 @@
     <Content Include="Assets\css\bootstrap.css" />
     <Content Include="Assets\css\bootstrap.min.css" />
     <Content Include="CadastrarMarca.aspx" />
+    <Content Include="CadastrarVeiculo.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="ListarMarcas.aspx" />
+    <Content Include="ListarVeiculos.aspx" />
     <Content Include="UserControls\SelectMarca.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -84,6 +86,13 @@
     </Compile>
     <Compile Include="CadastrarMarca.aspx.designer.cs">
       <DependentUpon>CadastrarMarca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarVeiculo.aspx.cs">
+      <DependentUpon>CadastrarVeiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastrarVeiculo.aspx.designer.cs">
+      <DependentUpon>CadastrarVeiculo.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataReaderExtensions.cs" />
     <Compile Include="Default.aspx.cs">
@@ -99,6 +108,13 @@
     </Compile>
     <Compile Include="ListarMarcas.aspx.designer.cs">
       <DependentUpon>ListarMarcas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListarVeiculos.aspx.cs">
+      <DependentUpon>ListarVeiculos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListarVeiculos.aspx.designer.cs">
+      <DependentUpon>ListarVeiculos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Master\theMaster.Master.cs">
       <DependentUpon>theMaster.Master</DependentUpon>
