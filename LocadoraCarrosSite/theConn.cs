@@ -14,7 +14,7 @@ namespace LocadoraCarrosSite
         private MySqlConnection MyCon;
         private MySqlCommand cmd;
         private MySqlDataReader readData;
-        private List<IDictionary<string,object>> rows;
+        private Dictionary<string, string> insertItens;
 
 
         public theConn()
@@ -41,6 +41,35 @@ namespace LocadoraCarrosSite
             return DataReaderExtensions.ListRecordsAsDictionaries(this.readData);
         }
 
+        public void InsertItem(string key, string value)
+        {
+            this.insertItens.Add(key, value);
+        }
+
+        public void Insert(string table)
+        {
+            string keys = " (";
+            string values = " (";
+            int i = this.insertItens.Count - 1;
+
+            foreach (KeyValuePair<string, string> item in this.insertItens)
+            {
+                if (i == 0)
+                {
+                    keys += item.Key + ")";
+                    values += "'" + item.Value + "')";
+                }
+                else
+                {
+                    keys += item.Key + ",";
+                    values += "'" + item.Value + "',";
+                }
+                i--;
+            }
+
+            var command = "INSERT INTO " + table + keys + " VALUES " + values;
+            this.Cmd(command);
+        }
 
         private void execute(MySqlCommand command)
         {
