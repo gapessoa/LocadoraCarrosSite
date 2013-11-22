@@ -7,11 +7,13 @@
         <h1>Marcas Disponíveis</h1>
     </div>
     <asp:GridView ID="GridView1" class="table table-striped table-bordered table-hover" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="MysqlLocadora" AllowPaging="True" AllowSorting="True">
-        <PagerSettings  Mode="NextPreviousFirstLast" FirstPageText="First" PreviousPageText="Previous" NextPageText="Next" LastPageText="Last" />
+        <PagerSettings  Mode="NumericFirstLast" FirstPageText="First" PreviousPageText="Previous" NextPageText="Next" LastPageText="Last" />
         <Columns>
             <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID"/>
             <asp:BoundField DataField="Marca" HeaderText="Marca" SortExpression="Marca" />
-            <asp:CommandField ButtonType="Button" HeaderText="Update" ShowCancelButton="False" ShowEditButton="True" ShowHeader="True" ControlStyle-CssClass="btn btn-info" />
+            <asp:CommandField ButtonType="Button" HeaderText="Editar" ShowCancelButton="False" ShowEditButton="True" ShowHeader="True" ControlStyle-CssClass="btn btn-info" EditText="Editar" UpdateText="Registrar" >
+<ControlStyle CssClass="btn btn-info"></ControlStyle>
+            </asp:CommandField>
             <asp:ButtonField ButtonType="Button" CommandName="Delete" HeaderText="Delete" ShowHeader="True" Text="Delete" ControlStyle-CssClass="btn btn-danger" >
 <ControlStyle CssClass="btn btn-danger"></ControlStyle>
             </asp:ButtonField>
