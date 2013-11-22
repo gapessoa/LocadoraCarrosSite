@@ -21,12 +21,10 @@ namespace LocadoraCarrosSite
         {
             theConn conn = new theConn();
 
-            string Index = "TESTE";
-
             conn.Cmd("INSERT INTO veiculo_marcas (nome) VALUES ('" + txtNome.Text + "')");
 
             HtmlGenericControl newControl = new HtmlGenericControl("div");
-            newControl.ID = "NEWControl" + Index;
+            //newControl.ID = "NEWControl" + Index;
             newControl.InnerHtml = "Você adicionou a marca <b>" + txtNome.Text + "</b> com êxito.";
 
             txtResp.Controls.Add(newControl);
