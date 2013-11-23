@@ -29,8 +29,18 @@ namespace LocadoraCarrosSite
             var ano = txtAno.Text;
             var km = txtKm.Text;
 
-            conn.Cmd("INSERT INTO veiculos (nome, placa, chassi, cor, modelo, ano, marca_id, tipo_combustivel,km) VALUES ('" + nome + "','" + placa + "','" + chassi + "','" + cor + "','" + modelo + "','" + ano + "'," + marca + "," + combustivel +"," + km + ")");
+            conn.InsertItem("nome",nome);
+            conn.InsertItem("placa",placa);
+            conn.InsertItem("chassi", chassi);
+            conn.InsertItem("cor",cor);
+            conn.InsertItem("modelo", modelo);
+            conn.InsertItem("ano", ano);
+            conn.InsertItem("marca_id", marca);
+            conn.InsertItem("tipo_combustivel", combustivel);
+            conn.InsertItem("km", km);
 
+            conn.Insert("veiculos");
+            
             HtmlGenericControl newControl = new HtmlGenericControl("div");
             //newControl.ID = "NEWControl" + Index;
             newControl.InnerHtml = "Você adicionou o veículo <b>" + txtNome.Text + "</b> com êxito.";
