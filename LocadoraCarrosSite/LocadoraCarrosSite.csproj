@@ -74,6 +74,7 @@
     <Content Include="CadastrarVeiculo.aspx" />
     <Content Include="CadastrarLocatario.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="ListarCondutores.aspx" />
     <Content Include="ListarMarcas.aspx" />
     <Content Include="ListarVeiculos.aspx" />
     <Content Include="UserControls\SelectMarca.ascx" />
@@ -117,6 +118,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListarCondutores.aspx.cs">
+      <DependentUpon>ListarCondutores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListarCondutores.aspx.designer.cs">
+      <DependentUpon>ListarCondutores.aspx</DependentUpon>
     </Compile>
     <Compile Include="ListarMarcas.aspx.cs">
       <DependentUpon>ListarMarcas.aspx</DependentUpon>
