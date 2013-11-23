@@ -14,7 +14,7 @@ namespace LocadoraCarrosSite
         private MySqlConnection MyCon;
         private MySqlCommand cmd;
         private MySqlDataReader readData;
-        private Dictionary<string, string> insertItens;
+        private Dictionary<string, string> insertItens = new Dictionary<string,string>();
 
 
         public theConn()
@@ -71,13 +71,36 @@ namespace LocadoraCarrosSite
             this.Cmd(command);
         }
 
+        public void Update(string table, string where)
+        {
+            string keys_values = "";
+            int i = this.insertItens.Count - 1;
+
+            foreach (KeyValuePair<string, string> item in this.insertItens)
+            {
+                if (i == 0)
+                {
+                    keys_values += item.Key + " = '" + item.Value;
+                }
+                else
+                {
+                    keys_values += item.Key + " = '" + item.Value + "',"; 
+                }
+                i--;
+            }
+
+            if (where.Length > 0)
+                where = " WHERE " + where;
+
+            var command = "UPDATE " + table + " SET " + keys_values + where;
+        }
+
         private void execute(MySqlCommand command)
         {
             command.ExecuteNonQuery();
 
             this.MyCon.Close();
         }
-
 
     }
 }
