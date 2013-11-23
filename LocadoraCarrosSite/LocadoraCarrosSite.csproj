@@ -69,6 +69,7 @@
     <Content Include="Assets\css\bootstrap-theme.min.css" />
     <Content Include="Assets\css\bootstrap.css" />
     <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="BD\locadora.sql" />
     <Content Include="CadastrarCondutor.aspx" />
     <Content Include="CadastrarMarca.aspx" />
     <Content Include="CadastrarVeiculo.aspx" />

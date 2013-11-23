@@ -31,6 +31,24 @@ namespace LocadoraCarrosSite {
         protected global::System.Web.UI.WebControls.Panel txtResp;
         
         /// <summary>
+        /// lblTipo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTipo;
+        
+        /// <summary>
+        /// txtTipo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList txtTipo;
+        
+        /// <summary>
         /// lblNome control.
         /// </summary>
         /// <remarks>

@@ -16,6 +16,16 @@
             <div class="panel-body">
                 <div class="form-group">
                     <div class="col-sm-12">
+                        <asp:Label ID="lblTipo" runat="server" Text="Tipo de Pessoa"></asp:Label>
+                        <asp:DropDownList ID="txtTipo" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="txtTipo_SelectedIndexChanged">
+                            <asp:ListItem Value="0">Física</asp:ListItem>
+                            <asp:ListItem Value="1">Jurídica</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-12">
                         <asp:Label ID="lblNome" runat="server" Text="Nome"></asp:Label>
                         <asp:TextBox ID="txtNome" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
@@ -27,7 +37,7 @@
                         <asp:TextBox ID="txtCPF" runat="server" CssClass="form-control" CausesValidation="True"></asp:TextBox>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <div class="col-sm-12">
                         <asp:Label ID="lblRG" runat="server" Text="RG"></asp:Label>
@@ -82,10 +92,10 @@
                 <div class="form-group">
                     <div class="col-sm-12">
                         <asp:Label ID="lblCidade" runat="server" Text="Cidade"></asp:Label>
-                        
+
                         <asp:DropDownList ID="txtCidade" runat="server" CssClass="form-control">
                         </asp:DropDownList>
-                        
+
                     </div>
                 </div>
 

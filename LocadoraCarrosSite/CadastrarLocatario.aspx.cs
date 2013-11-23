@@ -18,20 +18,15 @@ namespace LocadoraCarrosSite
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            theConn conn = new theConn();
 
-            conn.InsertItem("nome", txtNome.Text);
-            conn.InsertItem("cpf", txtCPF.Text);
-            conn.InsertItem("rg", txtRG.Text);
-            conn.InsertItem("email", txtEmail.Text);
-            conn.InsertItem("logradouro", txtLogradouro.Text);
-            conn.InsertItem("bairro", txtBairro.Text);
-            conn.InsertItem("cidade", txtCidade.SelectedValue);
-            conn.InsertItem("estado", txtEstado.SelectedValue);
-            conn.InsertItem("cep", txtCEP.Text);
-            conn.InsertItem("complemento", txtComplemento.Text);
-
-            conn.Insert("condutores");
+            if (txtTipo.SelectedValue == "0")
+            {
+                this.cadastraPessoaFisica();
+            }
+            else
+            {
+                this.cadastraPessoaJuridica();
+            }
 
             HtmlGenericControl newControl = new HtmlGenericControl("div");
             //newControl.ID = "NEWControl" + Index;
@@ -61,5 +56,62 @@ namespace LocadoraCarrosSite
             txtCidade.DataBind();
 
         }
+
+        protected void txtTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var tipo = txtTipo.SelectedValue;
+
+            if (tipo == "0")
+            {
+                lblCPF.Text = "CPF";
+                lblNome.Text = "Nome";
+                lblRG.Text = "RG";
+            }
+            else
+            {
+                lblCPF.Text = "CNPJ";
+                lblNome.Text = "Razão Social";
+                lblRG.Text = "Nome Fantasia";
+            }
+        }
+
+        private void cadastraPessoaFisica()
+        {
+            theConn conn = new theConn();
+
+            conn.InsertItem("nome", txtNome.Text);
+            conn.InsertItem("cpf", txtCPF.Text);
+            conn.InsertItem("rg", txtRG.Text);
+            conn.InsertItem("email", txtEmail.Text);
+            conn.InsertItem("logradouro", txtLogradouro.Text);
+            conn.InsertItem("bairro", txtBairro.Text);
+            conn.InsertItem("cidade", txtCidade.SelectedValue);
+            conn.InsertItem("estado", txtEstado.SelectedValue);
+            conn.InsertItem("cep", txtCEP.Text);
+            conn.InsertItem("complemento", txtComplemento.Text);
+            conn.InsertItem("tipo", "0");
+
+            conn.Insert("locatarios");
+        }
+
+        private void cadastraPessoaJuridica()
+        {
+            theConn conn = new theConn();
+
+            conn.InsertItem("nome", txtNome.Text);
+            conn.InsertItem("cnpj", txtCPF.Text);
+            conn.InsertItem("nome_fantasia", txtRG.Text);
+            conn.InsertItem("email", txtEmail.Text);
+            conn.InsertItem("logradouro", txtLogradouro.Text);
+            conn.InsertItem("bairro", txtBairro.Text);
+            conn.InsertItem("cidade", txtCidade.SelectedValue);
+            conn.InsertItem("estado", txtEstado.SelectedValue);
+            conn.InsertItem("cep", txtCEP.Text);
+            conn.InsertItem("complemento", txtComplemento.Text);
+            conn.InsertItem("tipo", "1");
+
+            conn.Insert("locatarios");
+        }
+
     }
 }
