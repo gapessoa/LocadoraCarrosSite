@@ -69,8 +69,10 @@
     <Content Include="Assets\css\bootstrap-theme.min.css" />
     <Content Include="Assets\css\bootstrap.css" />
     <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="CadastrarCondutor.aspx" />
     <Content Include="CadastrarMarca.aspx" />
     <Content Include="CadastrarVeiculo.aspx" />
+    <Content Include="CadastrarLocatario.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="ListarMarcas.aspx" />
     <Content Include="ListarVeiculos.aspx" />
@@ -80,6 +82,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastrarCondutor.aspx.cs">
+      <DependentUpon>CadastrarCondutor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastrarCondutor.aspx.designer.cs">
+      <DependentUpon>CadastrarCondutor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CadastrarMarca.aspx.cs">
       <DependentUpon>CadastrarMarca.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -95,6 +104,13 @@
       <DependentUpon>CadastrarVeiculo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Classes\DataReaderExtensions.cs" />
+    <Compile Include="CadastrarLocatario.aspx.cs">
+      <DependentUpon>CadastrarLocatario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastrarLocatario.aspx.designer.cs">
+      <DependentUpon>CadastrarLocatario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
