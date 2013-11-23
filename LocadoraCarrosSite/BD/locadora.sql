@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50614
 File Encoding         : 65001
 
-Date: 2013-11-23 19:01:07
+Date: 2013-11-23 19:54:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -9818,6 +9818,31 @@ INSERT INTO `estados` VALUES ('24', 'SC', 'Santa Catarina');
 INSERT INTO `estados` VALUES ('25', 'SE', 'Sergipe');
 INSERT INTO `estados` VALUES ('26', 'SP', 'São Paulo');
 INSERT INTO `estados` VALUES ('27', 'TO', 'Tocantins');
+
+-- ----------------------------
+-- Table structure for `locacoes`
+-- ----------------------------
+DROP TABLE IF EXISTS `locacoes`;
+CREATE TABLE `locacoes` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `data_reserva` date NOT NULL,
+  `tipo_locacao` tinyint(4) NOT NULL,
+  `franquia_dia` decimal(10,0) NOT NULL,
+  `diarias_previstas` int(2) NOT NULL,
+  `destino` varchar(255) NOT NULL,
+  `data_saida` date NOT NULL,
+  `km_saida` int(11) NOT NULL,
+  `dt_devolucao` date NOT NULL,
+  `km_devolucao` int(11) NOT NULL,
+  `data_contrato` date NOT NULL,
+  `veiculo_id` int(10) NOT NULL,
+  `locatario_id` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of locacoes
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for `locatarios`
