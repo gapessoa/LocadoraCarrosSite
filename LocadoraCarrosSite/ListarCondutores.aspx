@@ -5,8 +5,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cpMainContent" runat="server">
     <form id="form1" runat="server">
         <div class="page-header ">
-            <h1>
-            Listar Condutores
+            <h1>Listar Condutores
+            </h1>
         </div>
         <div class="table-responsive">
             <asp:GridView ID="GridView1" class="table table-striped table-bordered table-hover" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True">
@@ -54,7 +54,6 @@ condutores.complemento
 FROM
 condutores
 "></asp:SqlDataSource>
-        </h1>
 
     </form>
 </asp:Content>
