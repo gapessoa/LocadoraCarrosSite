@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
 
 namespace LocadoraCarrosSite
 {
@@ -11,23 +12,33 @@ namespace LocadoraCarrosSite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //theConn conn = new theConn();
 
-            //var rows = conn.Select("SELECT id,nome FROM veiculos");
-
-            //Dictionary<string, string> dataSource = new Dictionary<string, string>();
-
-            //foreach (var row in rows)
-            //{
-            //    dataSource.Add(row["id"].ToString(), row["nome"].ToString());
-            //}
-
-            //txtVeiculoEscolhido.DataSource = dataSource;
-            //txtVeiculoEscolhido.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            theConn conn = new theConn();
+
+            conn.InsertItem("data_reserva", txtDataReserva.Text);
+            conn.InsertItem("tipo_locacao", txtTipoLocacao.SelectedValue);
+            conn.InsertItem("franquia_dia", txtFranquiaDia.Text);
+            conn.InsertItem("diarias_previstas", txtDiariasPrevistas.Text);
+            conn.InsertItem("destino", txtDestino.Text);
+            conn.InsertItem("data_saida", Convert.ToDateTime(txtDataSaida.Text).ToString("yyyy-mm-dd"));
+            conn.InsertItem("km_saida", txtKMSaida.Text);
+            conn.InsertItem("dt_devolucao", Convert.ToDateTime(txtDataDevolucao.Text).ToString("yyyy-mm-dd"));
+            conn.InsertItem("km_devolucao", txtKmDevolucao.Text);
+            conn.InsertItem("data_contrato", Convert.ToDateTime(txtDataContrato.Text).ToString("yyyy-mm-dd"));
+            conn.InsertItem("veiculo_id", txtVeiculoEscolhido.SelectedValue);
+            conn.InsertItem("locatario_id", txtLocatario.SelectedValue);
+            conn.InsertItem("condutor_id", txtCondutor.SelectedValue);
+
+            conn.Insert("locacoes");
+
+            HtmlGenericControl newControl = new HtmlGenericControl("div");
+            newControl.InnerHtml = "Você adicionou uma locação com êxito.";
+
+            txtResp.Controls.Add(newControl);
         }
     }
 }

@@ -58,13 +58,13 @@ namespace LocadoraCarrosSite {
         protected global::System.Web.UI.WebControls.Label lblTipoDeLocacao;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// txtTipoLocacao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList txtTipoLocacao;
         
         /// <summary>
         /// lblFranquiaDia control.

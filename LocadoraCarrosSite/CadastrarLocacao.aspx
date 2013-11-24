@@ -24,7 +24,7 @@
                 <div class="form-group">
                     <div class="col-sm-12">
                         <asp:Label ID="lblTipoDeLocacao" runat="server" Text="Tipo de Locação"></asp:Label>
-                        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control">
+                        <asp:DropDownList ID="txtTipoLocacao" runat="server" CssClass="form-control">
                             <asp:ListItem Value="0">Diária</asp:ListItem>
                             <asp:ListItem Value="1">Mensal</asp:ListItem>
                         </asp:DropDownList>
@@ -48,7 +48,7 @@
                 <div class="form-group">
                     <div class="col-sm-12">
                         <asp:Label ID="lblDestino" runat="server" Text="Destino"></asp:Label>
-                        <asp:TextBox ID="txtDestino" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
+                        <asp:TextBox ID="txtDestino" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                 </div>
 
