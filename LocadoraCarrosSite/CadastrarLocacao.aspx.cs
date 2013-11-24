@@ -39,6 +39,20 @@ namespace LocadoraCarrosSite
             newControl.InnerHtml = "Você adicionou uma locação com êxito.";
 
             txtResp.Controls.Add(newControl);
+
+            txtDataReserva.Text = null;
+            txtTipoLocacao.SelectedIndex = -1;
+            txtFranquiaDia.Text = null;
+            txtDiariasPrevistas.Text = null;
+            txtDestino.Text = null;
+            txtDataSaida.Text = null;
+            txtKMSaida.Text = null;
+            txtDataDevolucao.Text = null;
+            txtKmDevolucao.Text = null;
+            txtDataContrato.Text = null;
+            txtVeiculoEscolhido.SelectedIndex = -1;
+            txtLocatario.SelectedIndex = -1;
+            txtCondutor.SelectedIndex = -1;
         }
     }
 }

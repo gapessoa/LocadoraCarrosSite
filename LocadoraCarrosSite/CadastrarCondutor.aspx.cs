@@ -38,13 +38,23 @@ namespace LocadoraCarrosSite
             conn.Insert("condutores");
 
             HtmlGenericControl newControl = new HtmlGenericControl("div");
-            //newControl.ID = "NEWControl" + Index;
             newControl.InnerHtml = "Você adicionou o condutor <b>" + txtNome.Text + "</b> com êxito.";
 
             txtResp.Controls.Add(newControl);
 
             txtResp.Visible = true;
             txtNome.Text = null;
+            txtCPF.Text = null;
+            txtLogradouro.Text = null;
+            txtBairro.Text = null;
+            txtCidade.SelectedIndex = -1;
+            txtEstado.SelectedIndex = -1;
+            txtCEP.Text = null;
+            txtComplemento.Text = null;
+            txtCNH.Text = null;
+            txtCNHDataExpedicao.Text = null;
+            txtPrimeiraHabilitacao.Text = null;
+            txtCNHVencimento.Text = null;
         }
 
         protected void txtEstado_SelectedIndexChanged(object sender, EventArgs e)
