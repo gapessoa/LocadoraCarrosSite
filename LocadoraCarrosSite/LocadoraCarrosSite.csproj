@@ -71,6 +71,7 @@
     <Content Include="Assets\css\bootstrap.min.css" />
     <Content Include="BD\locadora.sql" />
     <Content Include="CadastrarCondutor.aspx" />
+    <Content Include="CadastrarLocacao.aspx" />
     <Content Include="CadastrarMarca.aspx" />
     <Content Include="CadastrarVeiculo.aspx" />
     <Content Include="CadastrarLocatario.aspx" />
@@ -91,6 +92,13 @@
     </Compile>
     <Compile Include="CadastrarCondutor.aspx.designer.cs">
       <DependentUpon>CadastrarCondutor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarLocacao.aspx.cs">
+      <DependentUpon>CadastrarLocacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastrarLocacao.aspx.designer.cs">
+      <DependentUpon>CadastrarLocacao.aspx</DependentUpon>
     </Compile>
     <Compile Include="CadastrarMarca.aspx.cs">
       <DependentUpon>CadastrarMarca.aspx</DependentUpon>
