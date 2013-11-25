@@ -14,24 +14,18 @@
                     <asp:BoundField DataField="id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="id" />
                     <asp:BoundField DataField="nome" HeaderText="Nome" SortExpression="nome" />
                     <asp:BoundField DataField="cpf" HeaderText="CPF" SortExpression="cpf" />
-                    <asp:BoundField DataField="rg" HeaderText="RG" SortExpression="rg" />
                     <asp:BoundField DataField="email" HeaderText="E-Mail" SortExpression="email" />
                     <asp:BoundField DataField="estado" HeaderText="UF" SortExpression="estado" />
                     <asp:BoundField DataField="cidade" HeaderText="Cidade" SortExpression="cidade" />
-                    <asp:BoundField DataField="bairro" HeaderText="Bairro" SortExpression="bairro" />
-                    <asp:BoundField DataField="logradouro" HeaderText="Logradouro" SortExpression="logradouro" />
-                    <asp:BoundField DataField="complemento" HeaderText="Complemento" SortExpression="complemento" />
-                    <asp:BoundField DataField="cep" HeaderText="CEP" SortExpression="cep" />
-                    <asp:BoundField DataField="cnh_registro" HeaderText="CNH Registro" SortExpression="cnh_registro" />
-                    <asp:BoundField DataField="cnh_vencimento" HeaderText="CNH Venc." SortExpression="cnh_vencimento" />
-                    <asp:BoundField DataField="cnh_data_primeira_habilitacao" HeaderText="1ª Hab." SortExpression="cnh_data_primeira_habilitacao" />
-                    <asp:BoundField DataField="cnh_data_expedicao" HeaderText="CNH Dat. Exp." SortExpression="cnh_data_expedicao" />
-                    <asp:CommandField ButtonType="Button" HeaderText="Editar" ShowCancelButton="False" ShowEditButton="True" ShowHeader="True">
-                        <ControlStyle CssClass="btn btn-info" />
-                    </asp:CommandField>
-                    <asp:CommandField ButtonType="Button" HeaderText="Deletar" ShowDeleteButton="True" ShowHeader="True">
+                    <asp:HyperLinkField DataNavigateUrlFields="id" DataNavigateUrlFormatString="VerCondutor.aspx?id={0}" Text="Info" HeaderText="Info">
+                    <ControlStyle CssClass="btn btn-info" />
+                    </asp:HyperLinkField>
+                    <asp:TemplateField HeaderText="Delete" ShowHeader="False">
+                        <ItemTemplate>
+                            <asp:Button ID="Button1" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Você realmente deseja deletar este item?')" />
+                        </ItemTemplate>
                         <ControlStyle CssClass="btn btn-danger" />
-                    </asp:CommandField>
+                    </asp:TemplateField>
                 </Columns>
             </asp:GridView>
         </div>
@@ -53,7 +47,7 @@ condutores.cep,
 condutores.complemento
 FROM
 condutores
-"></asp:SqlDataSource>
+" DeleteCommand="DELETE FROM condutores WHERE id = @ID"></asp:SqlDataSource>
 
     </form>
 </asp:Content>
