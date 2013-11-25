@@ -81,6 +81,7 @@
     <Content Include="ListarMarcas.aspx" />
     <Content Include="ListarVeiculos.aspx" />
     <Content Include="UserControls\SelectMarca.ascx" />
+    <Content Include="VerCondutor.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -172,6 +173,13 @@
     </Compile>
     <Compile Include="UserControls\SelectMarca.ascx.designer.cs">
       <DependentUpon>SelectMarca.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="VerCondutor.aspx.cs">
+      <DependentUpon>VerCondutor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerCondutor.aspx.designer.cs">
+      <DependentUpon>VerCondutor.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
