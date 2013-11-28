@@ -8,7 +8,7 @@
             <h1>Dados do Condutor
             </h1>
         </div>
-        <asp:DetailsView ID="DetailsView1" CssClass="table table-striped table-bordered table-hover" runat="server" DataSourceID="SqlDataSource1" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="id">
+        <asp:DetailsView ID="DetailsView1" CssClass="table table-striped table-bordered table-hover" runat="server" DataSourceID="SqlDataSource1" Height="50px" Width="400px" AutoGenerateRows="False" DataKeyNames="id">
             <Fields>
                 <asp:BoundField DataField="id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="id" />
                 <asp:BoundField DataField="nome" HeaderText="Nome" SortExpression="nome" />

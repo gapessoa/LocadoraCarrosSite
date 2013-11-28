@@ -31,7 +31,7 @@ namespace LocadoraCarrosSite
             conn.InsertItem("cep", txtCEP.Text);
             conn.InsertItem("complemento", txtComplemento.Text);
             conn.InsertItem("cnh_registro", txtCNH.Text);
-            conn.InsertItem("cnh_data_expedicao", Convert.ToDateTime(txtCNHDataExpedicao.Text).ToString("yyyy-mm-dd"));
+            conn.InsertItem("cnh_data_expedicao", txtCNHDataExpedicao.Text);
             conn.InsertItem("cnh_data_primeira_habilitacao", txtPrimeiraHabilitacao.Text);
             conn.InsertItem("cnh_vencimento", txtCNHVencimento.Text);
 
