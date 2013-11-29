@@ -24,9 +24,12 @@
                     <asp:CommandField ButtonType="Button" HeaderText="Editar" ShowCancelButton="False" ShowEditButton="True" ShowHeader="True" ControlStyle-CssClass="btn btn-info" EditText="Editar" UpdateText="Registrar">
                         <ControlStyle CssClass="btn btn-info"></ControlStyle>
                     </asp:CommandField>
-                    <asp:ButtonField ButtonType="Button" CommandName="Delete" HeaderText="Delete" ShowHeader="True" Text="Delete" ControlStyle-CssClass="btn btn-danger">
-                        <ControlStyle CssClass="btn btn-danger"></ControlStyle>
-                    </asp:ButtonField>
+                    <asp:TemplateField HeaderText="Delete">
+                        <ItemTemplate>
+                            <asp:Button ID="Button1" runat="server" CausesValidation="false" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Você realmente deseja deletar este item?')"/>
+                        </ItemTemplate>
+                        <ControlStyle CssClass="btn btn-danger" />
+                    </asp:TemplateField>
                 </Columns>
             </asp:GridView>
         </div>

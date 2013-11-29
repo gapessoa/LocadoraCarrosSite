@@ -14,27 +14,20 @@
                     <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
                     <asp:BoundField DataField="nome" HeaderText="nome" SortExpression="nome" />
                     <asp:BoundField DataField="cpf" HeaderText="cpf" SortExpression="cpf" />
-                    <asp:BoundField DataField="rg" HeaderText="rg" SortExpression="rg" />
-                    <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
+                    <asp:BoundField DataField="cnpj" HeaderText="cnpj" SortExpression="cnpj" />
                     <asp:BoundField DataField="cidade" HeaderText="cidade" SortExpression="cidade" />
                     <asp:BoundField DataField="estado" HeaderText="estado" SortExpression="estado" />
-                    <asp:BoundField DataField="logradouro" HeaderText="logradouro" SortExpression="logradouro" />
-                    <asp:BoundField DataField="bairro" HeaderText="bairro" SortExpression="bairro" />
-                    <asp:BoundField DataField="cep" HeaderText="cep" SortExpression="cep" />
-                    <asp:BoundField DataField="complemento" HeaderText="complemento" SortExpression="complemento" />
-                    <asp:BoundField DataField="cnpj" HeaderText="cnpj" SortExpression="cnpj" />
-                    <asp:BoundField DataField="nome_fantasia" HeaderText="nome_fantasia" SortExpression="nome_fantasia" />
-                    <asp:CheckBoxField DataField="tipo" HeaderText="tipo" SortExpression="tipo" />
-                    <asp:CommandField ButtonType="Button" HeaderText="Editar" ShowCancelButton="False" ShowEditButton="True">
-                        <ControlStyle CssClass="btn btn-info" />
-                    </asp:CommandField>
-                    <asp:CommandField ButtonType="Button" HeaderText="Deletar" ShowDeleteButton="True">
+                    <asp:BoundField DataField="Tipo" HeaderText="Tipo" SortExpression="Tipo" />
+                    <asp:TemplateField HeaderText="Deletar">
+                        <ItemTemplate>
+                            <asp:Button ID="Button1" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Você realmente deseja deletar este item?')" />
+                        </ItemTemplate>
                         <ControlStyle CssClass="btn btn-danger" />
-                    </asp:CommandField>
+                    </asp:TemplateField>
                 </Columns>
             </asp:GridView>
         </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:locadoraConnectionString %>" ProviderName="<%$ ConnectionStrings:locadoraConnectionString.ProviderName %>" SelectCommand="SELECT * FROM locatarios"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:locadoraConnectionString %>" ProviderName="<%$ ConnectionStrings:locadoraConnectionString.ProviderName %>" SelectCommand="SELECT locatarios.id as id,locatarios.nome as nome, cpf, cnpj, cidade, estado, tipo_pessoa.nome as Tipo FROM locatarios LEFT JOIN tipo_pessoa ON (locatarios.tipo = tipo_pessoa.id)" DeleteCommand="DELETE FROM locatarios WHERE id = @id"></asp:SqlDataSource>
     </form>
 
 </asp:Content>
