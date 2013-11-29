@@ -12,7 +12,15 @@
                 <PagerSettings Mode="NumericFirstLast" FirstPageText="First" PreviousPageText="Previous" NextPageText="Next" LastPageText="Last" />
                 <Columns>
                     <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
-                    <asp:BoundField DataField="Marca" HeaderText="Marca" SortExpression="Marca" />
+                    <asp:TemplateField HeaderText="Marca" SortExpression="Marca">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Marca") %>'></asp:TextBox>
+                            <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo obrigatório." ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="Label1" runat="server" Text='<%# Bind("Marca") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:CommandField ButtonType="Button" HeaderText="Editar" ShowCancelButton="False" ShowEditButton="True" ShowHeader="True" ControlStyle-CssClass="btn btn-info" EditText="Editar" UpdateText="Registrar">
                         <ControlStyle CssClass="btn btn-info"></ControlStyle>
                     </asp:CommandField>
