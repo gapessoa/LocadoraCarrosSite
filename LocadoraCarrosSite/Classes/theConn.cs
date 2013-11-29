@@ -20,9 +20,15 @@ namespace LocadoraCarrosSite
         public theConn()
         {
             this.connString = ConfigurationManager.ConnectionStrings["locadoraConnectionString"].ConnectionString;
-
-            this.MyCon = new MySqlConnection(connString);
-            this.MyCon.Open();
+            try
+            {
+                this.MyCon = new MySqlConnection(connString);
+                this.MyCon.Open();
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
         }
 
         public void Cmd(string command)
@@ -97,9 +103,16 @@ namespace LocadoraCarrosSite
 
         private void execute(MySqlCommand command)
         {
-            command.ExecuteNonQuery();
+            try
+            {
+                command.ExecuteNonQuery();
 
-            this.MyCon.Close();
+                this.MyCon.Close();
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
         }
 
     }
