@@ -28,6 +28,7 @@
                     <div class="col-sm-12">
                         <asp:Label ID="lblNome" runat="server" Text="Nome"></asp:Label>
                         <asp:TextBox ID="txtNome" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo obrigatório." ControlToValidate="txtNome"></asp:RequiredFieldValidator>
                     </div>
                 </div>
 
@@ -35,6 +36,7 @@
                     <div class="col-sm-12">
                         <asp:Label ID="lblCPF" runat="server" Text="CPF"></asp:Label>
                         <asp:TextBox ID="txtCPF" runat="server" CssClass="form-control" CausesValidation="True"></asp:TextBox>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Campo obrigatório." ControlToValidate="txtCPF"></asp:RequiredFieldValidator>
                     </div>
                 </div>
 
@@ -42,6 +44,7 @@
                     <div class="col-sm-12">
                         <asp:Label ID="lblRG" runat="server" Text="RG"></asp:Label>
                         <asp:TextBox ID="txtRG" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator3" runat="server" ErrorMessage="Campo obrigatório." ControlToValidate="txtRG"></asp:RequiredFieldValidator>
                     </div>
                 </div>
 
@@ -49,6 +52,7 @@
                     <div class="col-sm-12">
                         <asp:Label ID="lblEmail" runat="server" Text="E-Mail"></asp:Label>
                         <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Campo obrigatório." ControlToValidate="txtEmail"></asp:RequiredFieldValidator>
                     </div>
                 </div>
             </div>
@@ -62,6 +66,7 @@
                     <div class="col-sm-12">
                         <asp:Label ID="lblLogradouro" runat="server" Text="Logradouro"></asp:Label>
                         <asp:TextBox ID="txtLogradouro" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator5" runat="server" ErrorMessage="Campo obrigatório." ControlToValidate="txtLogradouro"></asp:RequiredFieldValidator>
                     </div>
                 </div>
 
@@ -69,6 +74,7 @@
                     <div class="col-sm-12">
                         <asp:Label ID="lblComplemento" runat="server" Text="Complemento"></asp:Label>
                         <asp:TextBox ID="txtComplemento" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator6" runat="server" ErrorMessage="Campo obrigatório." ControlToValidate="txtComplemento"></asp:RequiredFieldValidator>
                     </div>
                 </div>
 
@@ -76,6 +82,7 @@
                     <div class="col-sm-12">
                         <asp:Label ID="lblBairro" runat="server" Text="Bairro"></asp:Label>
                         <asp:TextBox ID="txtBairro" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator7" runat="server" ErrorMessage="Campo obrigatório." ControlToValidate="txtBairro"></asp:RequiredFieldValidator>
                     </div>
                 </div>
                 <div class="form-group">
@@ -95,7 +102,7 @@
 
                         <asp:DropDownList ID="txtCidade" runat="server" CssClass="form-control">
                         </asp:DropDownList>
-
+                        <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator9" runat="server" ErrorMessage="Campo obrigatório." ControlToValidate="txtCidade"></asp:RequiredFieldValidator>
                     </div>
                 </div>
 
@@ -103,6 +110,7 @@
                     <div class="col-sm-12">
                         <asp:Label ID="lblCEP" runat="server" Text="CEP"></asp:Label>
                         <asp:TextBox ID="txtCEP" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator8" runat="server" ErrorMessage="Campo obrigatório." ControlToValidate="txtCEP"></asp:RequiredFieldValidator>
                     </div>
                     <br />
                 </div>
