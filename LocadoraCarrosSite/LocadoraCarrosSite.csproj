@@ -82,6 +82,7 @@
     <Content Include="ListarVeiculos.aspx" />
     <Content Include="UserControls\SelectMarca.ascx" />
     <Content Include="VerCondutor.aspx" />
+    <Content Include="VerLocatario.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -180,6 +181,13 @@
     </Compile>
     <Compile Include="VerCondutor.aspx.designer.cs">
       <DependentUpon>VerCondutor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VerLocatario.aspx.cs">
+      <DependentUpon>VerLocatario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerLocatario.aspx.designer.cs">
+      <DependentUpon>VerLocatario.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
