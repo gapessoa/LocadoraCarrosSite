@@ -12,6 +12,7 @@
             <div class="col-sm-8">
                 <asp:Label ID="lblNome" runat="server" Text="Nome"></asp:Label>
                 <asp:TextBox ID="txtNome" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Este campo é obrigatório." ControlToValidate="txtNome"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -26,41 +27,47 @@
             <div class="col-sm-8">
                 <asp:Label ID="lblAno" runat="server" Text="Ano"></asp:Label>
                 <asp:TextBox ID="txtAno" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Este campo é obrigatório." ControlToValidate="txtAno"></asp:RequiredFieldValidator>
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-sm-8">
                 <asp:Label ID="lblPlaca" runat="server" Text="Placa"></asp:Label>
-                <asp:TextBox ID="txtPlaca" runat="server"  CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtPlaca" runat="server"  CssClass="form-control" MaxLength="8"></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator3" runat="server" ErrorMessage="Este campo é obrigatório." ControlToValidate="txtPlaca"></asp:RequiredFieldValidator>
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-sm-8">
                 <asp:Label ID="lblChassi" runat="server" Text="Chassi"></asp:Label>
-                <asp:TextBox ID="txtChassi" runat="server"  CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtChassi" runat="server"  CssClass="form-control" MaxLength="17"></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Este campo é obrigatório." ControlToValidate="txtChassi"></asp:RequiredFieldValidator>
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-sm-8">
                 <asp:Label ID="lblCor" runat="server" Text="Cor"></asp:Label>
-                <asp:TextBox ID="txtCor" runat="server"  CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtCor" runat="server"  CssClass="form-control" MaxLength="100"></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator5" runat="server" ErrorMessage="Este campo é obrigatório." ControlToValidate="txtCor"></asp:RequiredFieldValidator>
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-sm-8">
                 <asp:Label ID="lblKm" runat="server" Text="Kilometragem"></asp:Label>
-                <asp:TextBox ID="txtKm" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtKm" runat="server" CssClass="form-control" MaxLength="10"></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator6" runat="server" ErrorMessage="Este campo é obrigatório." ControlToValidate="txtKm"></asp:RequiredFieldValidator>
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-sm-8">
                 <asp:Label ID="lblModelo" runat="server" Text="Modelo"></asp:Label>
-                <asp:TextBox ID="txtModelo" runat="server"  CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtModelo" runat="server"  CssClass="form-control" MaxLength="100"></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator7" runat="server" ErrorMessage="Este campo é obrigatório." ControlToValidate="txtModelo"></asp:RequiredFieldValidator>
             </div>
         </div>
 

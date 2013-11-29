@@ -29,10 +29,10 @@ namespace LocadoraCarrosSite
             var ano = txtAno.Text;
             var km = txtKm.Text;
 
-            conn.InsertItem("nome",nome);
-            conn.InsertItem("placa",placa);
+            conn.InsertItem("nome", nome);
+            conn.InsertItem("placa", placa);
             conn.InsertItem("chassi", chassi);
-            conn.InsertItem("cor",cor);
+            conn.InsertItem("cor", cor);
             conn.InsertItem("modelo", modelo);
             conn.InsertItem("ano", ano);
             conn.InsertItem("marca_id", marca);
@@ -40,7 +40,7 @@ namespace LocadoraCarrosSite
             conn.InsertItem("km", km);
 
             conn.Insert("veiculos");
-            
+
             HtmlGenericControl newControl = new HtmlGenericControl("div");
             //newControl.ID = "NEWControl" + Index;
             newControl.InnerHtml = "Você adicionou o veículo <b>" + txtNome.Text + "</b> com êxito.";

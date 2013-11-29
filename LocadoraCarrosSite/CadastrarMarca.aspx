@@ -12,6 +12,7 @@
             <div class="col-sm-8">
                 <asp:Label ID="Label1" runat="server" Text="Digite o nome da Marca"></asp:Label>
                 <asp:TextBox ID="txtNome" runat="server"  class="form-control"></asp:TextBox>
+                <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Digite o nome da marca." ControlToValidate="txtNome"></asp:RequiredFieldValidator>
             </div>
         </div>
         
