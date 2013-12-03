@@ -14,12 +14,12 @@ namespace LocadoraCarrosSite
         private MySqlConnection MyCon;
         private MySqlCommand cmd;
         private MySqlDataReader readData;
-        private Dictionary<string, string> insertItens = new Dictionary<string,string>();
+        private Dictionary<string, string> insertItens = new Dictionary<string, string>();
 
 
         public theConn()
         {
-            this.connString = ConfigurationManager.ConnectionStrings["locadoraConnectionString"].ConnectionString;
+            this.connString = ConfigurationManager.ConnectionStrings["LocadoraCarrosDesktop.Properties.Settings.locadoraConnectionString"].ConnectionString;
             try
             {
                 this.MyCon = new MySqlConnection(connString);
@@ -38,7 +38,7 @@ namespace LocadoraCarrosSite
             this.execute(this.cmd);
         }
 
-        public IList<IDictionary<string,object>> Select(string commmand)
+        public IList<IDictionary<string, object>> Select(string commmand)
         {
 
             this.cmd = new MySqlCommand(commmand, this.MyCon);
@@ -77,7 +77,7 @@ namespace LocadoraCarrosSite
             this.Cmd(command);
         }
 
-        public void Update(string table, string where)
+        public void Update(string table, string row, string value)
         {
             string keys_values = "";
             int i = this.insertItens.Count - 1;
@@ -86,19 +86,21 @@ namespace LocadoraCarrosSite
             {
                 if (i == 0)
                 {
-                    keys_values += item.Key + " = '" + item.Value;
+                    keys_values += item.Key + " = '" + item.Value + "'";
                 }
                 else
                 {
-                    keys_values += item.Key + " = '" + item.Value + "',"; 
+                    keys_values += item.Key + " = '" + item.Value + "',";
                 }
                 i--;
             }
 
-            if (where.Length > 0)
-                where = " WHERE " + where;
+
+            var where = " WHERE " + row + " = " + value;
 
             var command = "UPDATE " + table + " SET " + keys_values + where;
+
+            this.Cmd(command);
         }
 
         private void execute(MySqlCommand command)
