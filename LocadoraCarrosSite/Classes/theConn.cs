@@ -19,7 +19,7 @@ namespace LocadoraCarrosSite
 
         public theConn()
         {
-            this.connString = ConfigurationManager.ConnectionStrings["LocadoraCarrosDesktop.Properties.Settings.locadoraConnectionString"].ConnectionString;
+            this.connString = ConfigurationManager.ConnectionStrings["locadoraConnectionString"].ConnectionString;
             try
             {
                 this.MyCon = new MySqlConnection(connString);
