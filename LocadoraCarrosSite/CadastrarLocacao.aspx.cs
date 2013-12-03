@@ -35,6 +35,10 @@ namespace LocadoraCarrosSite
 
             conn.Insert("locacoes");
 
+            theConn conn2 = new theConn();
+            conn2.InsertItem("alugado", "1");
+            conn2.Update("veiculos", "id", txtVeiculoEscolhido.SelectedValue.ToString());
+
             HtmlGenericControl newControl = new HtmlGenericControl("div");
             newControl.InnerHtml = "Você adicionou uma locação com êxito.";
 
