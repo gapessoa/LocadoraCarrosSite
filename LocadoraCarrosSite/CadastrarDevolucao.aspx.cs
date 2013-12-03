@@ -55,7 +55,20 @@ namespace LocadoraCarrosSite
             {
                 this.show_msg("<b>Registre o KM de devolução.</b>");
                 return false;
+            }
 
+            try
+            {
+                if(Convert.ToDateTime(txtDataDevolucao.Text)  < Convert.ToDateTime(txtDataSaida.Text))
+                {
+                    this.show_msg("<b>A data de devolução deve ser maior do que a data de saída</b>");
+                    return false;
+                }
+            }
+            catch (Exception ext)
+            {
+                this.show_msg("<b>Registre a data de devolução.</b>");
+                return false;
             }
             return true;
         }
