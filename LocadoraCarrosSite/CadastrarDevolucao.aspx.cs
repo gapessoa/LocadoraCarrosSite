@@ -16,7 +16,7 @@ namespace LocadoraCarrosSite
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.id = Request.QueryString["id"];
+            this.id = Request.QueryString["id"].ToString();
             this.load_Locacao();
         }
 
