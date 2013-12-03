@@ -75,8 +75,10 @@
     <Content Include="CadastrarMarca.aspx" />
     <Content Include="CadastrarVeiculo.aspx" />
     <Content Include="CadastrarLocatario.aspx" />
+    <Content Include="CadastrarDevolucao.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="ListarCondutores.aspx" />
+    <Content Include="ListarLocacoes.aspx" />
     <Content Include="ListarLocatarios.aspx" />
     <Content Include="ListarMarcas.aspx" />
     <Content Include="ListarVeiculos.aspx" />
@@ -124,6 +126,13 @@
     <Compile Include="CadastrarLocatario.aspx.designer.cs">
       <DependentUpon>CadastrarLocatario.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CadastrarDevolucao.aspx.cs">
+      <DependentUpon>CadastrarDevolucao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastrarDevolucao.aspx.designer.cs">
+      <DependentUpon>CadastrarDevolucao.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -137,6 +146,13 @@
     </Compile>
     <Compile Include="ListarCondutores.aspx.designer.cs">
       <DependentUpon>ListarCondutores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListarLocacoes.aspx.cs">
+      <DependentUpon>ListarLocacoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListarLocacoes.aspx.designer.cs">
+      <DependentUpon>ListarLocacoes.aspx</DependentUpon>
     </Compile>
     <Compile Include="ListarLocatarios.aspx.cs">
       <DependentUpon>ListarLocatarios.aspx</DependentUpon>
