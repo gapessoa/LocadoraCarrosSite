@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50614
 File Encoding         : 65001
 
-Date: 2013-11-29 17:50:53
+Date: 2013-12-02 10:03:22
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -9784,18 +9784,26 @@ CREATE TABLE `condutores` (
   `cep` char(9) NOT NULL,
   `complemento` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of condutores
 -- ----------------------------
-INSERT INTO `condutores` VALUES ('5', 'Fulano da Silva', '12312312333', '231231232', 'ggg@ggg.com.br', '3208470923', '1983-06-19', '1983-06-19', '1983-06-19', 'Abdon Batista', 'SC', 'Rua Man', 'SAntan', '02019000', '123');
-INSERT INTO `condutores` VALUES ('6', 'Haha Da Silav', '23423423444', '348765592', 'gasjo@oasjdo.com.br', '2345532', '1983-06-19', '1983-06-19', '2003-05-20', 'Abaetetuba', 'PA', 'oasodj', 'aosjd', '23423444', 'oadjsoj');
+INSERT INTO `condutores` VALUES ('5', 'Fulano da Silva', '12312312333', '231231232', 'ggg@ggg.com.br', '434343434', '1983-06-19', '1983-06-19', '1983-06-19', 'Abdon Batista', 'SC', 'Rua Man', 'SAntan', '02019000', '123');
+INSERT INTO `condutores` VALUES ('6', 'Haha Da Silav', '23423423444', '348765592', 'gasjo@oasjdo.com.br', '4242', '1983-06-19', '1983-06-19', '2003-05-20', 'Abaetetuba', 'PA', 'oasodj', 'aosjd', '23423444', 'oadjsoj');
 INSERT INTO `condutores` VALUES ('7', 'Mariana X', '23123123123', '2323232323', 'mariana@mariana.com.br', '123123234', '2013-00-28', '2013-11-28', '2013-11-28', 'Apoti', 'PE', 'Rua Margfim', 'Ae', '938494', 'qwejo');
 INSERT INTO `condutores` VALUES ('8', 'Fulano da Silva', '1231231231', '123123123', 'asd@asd.com.br', '13123', '2012-00-20', '2012-12-20', '2012-12-20', 'Aguti', 'SC', 'asdasd', 'asdasd', '02018000', 'asdasd');
 INSERT INTO `condutores` VALUES ('9', 'Fulano da Silva', '1231231231', '123123123', 'asd@asd.com.br', '13123', '2012-12-20', '2012-12-20', '2012-12-20', 'Aguti', 'SC', 'asdasd', 'asdasd', '02018000', 'asdasd');
-INSERT INTO `condutores` VALUES ('10', 'Fulano da Silva', '1231231231', '123123123', 'asd@asd.com.br', '13123', '2012-12-20', '2012-12-20', '2012-12-20', 'Aguti', 'SC', 'asdasd', 'asdasd', '02018000', 'asdasd');
 INSERT INTO `condutores` VALUES ('11', 'Olnly a Testq', '31253322312', '233233332', 'asodjoj@oasjdoasj.com.br', '324234234', '2011-11-08', '2011-11-08', '2011-11-08', 'Camadanta', 'AL', 'Apenas um teste', 'Santana', '02018000', 'ap.4');
+INSERT INTO `condutores` VALUES ('14', 'José Pessoa', '31563377810', '440473391', 'zepessoa@controlnet.com.br', '123390dhshd', '1983-06-19', '2013-11-30', '2013-11-30', 'Acioli', 'ES', 'Teste', 'Santana', '02019-000', 'Teste');
+INSERT INTO `condutores` VALUES ('15', 'ioheoiwqh', 'oihiohioh', 'oihoioih', 'iohoihoi', '12312312321', '1983-06-19', '1983-06-19', '1983-06-19', 'Acrelandia', 'AC', 'oihoihoih', 'iohoihoi', '23322-323', 'iohoiho');
+INSERT INTO `condutores` VALUES ('16', 'wewe123123', '1231231', '312312', '3213123123', '12312312312', '2013-11-20', '2013-11-20', '2012-12-20', 'Acrelandia', 'AC', '123123', '123123', '12312-321', '123123');
+INSERT INTO `condutores` VALUES ('17', 'qee31213', '12312321312', '213123123', '123123123', '12312312312', '2013-11-30', '2013-11-30', '2013-11-30', 'Acrelandia', 'AC', '123123123', '1233123', '12312-321', '123123123');
+INSERT INTO `condutores` VALUES ('18', '5436345', '345345345', '34534', '345345', '45345345', '1983-06-19', '1983-06-19', '1983-06-19', 'Alto Horizonte', 'GO', '345345345', '345345', '43545-545', '435453');
+INSERT INTO `condutores` VALUES ('19', 'Apenas um test', '234324', '23423423', '32423423', '123123213', '2012-12-19', '2012-12-19', '2012-12-19', 'Acrelandia', 'AC', 'dsopjfposdj', 'aspodj', '12323-323', 'sapodj');
+INSERT INTO `condutores` VALUES ('21', 'GAGATE', '2312321', '123123', '123123', '123123123', '1983-06-19', '1983-06-19', '1983-06-19', 'Acrelandia', 'AC', '123123213', '12312312', '02019-000', '123123');
+INSERT INTO `condutores` VALUES ('22', 'onlyeoruo', 'opqewjpo', 'opjwqepojpo', 'opjwqepoj', '324234234', '1983-06-19', '1683-06-19', '1983-06-19', 'Acrelandia', 'AC', '123123123', '123123', '12312-312', '12312312');
+INSERT INTO `condutores` VALUES ('23', 'Gabriel Pessoa', '31563377810', '', 'gabriel@controlnet.com.br', '22323243434', '1997-05-02', '1997-05-02', '2015-05-02', 'Adamantina', 'SP', 'Rua Conselheiro Moreira de Barros', 'Santana', '02018-012', '120, ap.5');
 
 -- ----------------------------
 -- Table structure for `estados`
@@ -9858,13 +9866,16 @@ CREATE TABLE `locacoes` (
   `veiculo_id` int(10) NOT NULL,
   `locatario_id` int(10) NOT NULL,
   `condutor_id` int(10) NOT NULL,
+  `valor_pago` decimal(10,0) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of locacoes
 -- ----------------------------
-INSERT INTO `locacoes` VALUES ('1', '1983-06-19', '0', '1500', '3', 'São Roque', '1983-00-20', '2000', '1983-00-19', '20000', '1983-00-19', '6', '1', '4');
+INSERT INTO `locacoes` VALUES ('1', '1983-06-19', '0', '1500', '3', 'São Roque', '1983-00-20', '2000', '2013-12-02', '20000', '1983-00-19', '6', '1', '4', null);
+INSERT INTO `locacoes` VALUES ('3', '2013-12-02', '0', '51', '20', 'iooi', '2013-12-02', '25350', null, null, '2013-12-02', '14', '6', '14', null);
+INSERT INTO `locacoes` VALUES ('4', '2013-12-02', '1', '23', '23', 'SAntana', '2013-12-02', '52000', null, null, '2013-12-02', '6', '2', '9', null);
 
 -- ----------------------------
 -- Table structure for `locatarios`
@@ -9886,13 +9897,32 @@ CREATE TABLE `locatarios` (
   `nome_fantasia` varchar(255) DEFAULT NULL,
   `tipo` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of locatarios
 -- ----------------------------
-INSERT INTO `locatarios` VALUES ('1', 'Gabriel', '31563377810', '440473391', 'gabriel@controlnet.com.br', 'Abdon Batista', 'SC', 'Rua Frei Vicente do Salvador, 120', 'Santana', '02019000', 'ap.5', null, null, '0');
+INSERT INTO `locatarios` VALUES ('1', 'Gabriel', '31563377812', '440473392', 'gabriel@controlnet.com.br', 'Alta Para', 'PA', 'Rua Frei Vicente do Salvador, 120', 'Santana', '02019-000', 'ap.5', null, null, '0');
 INSERT INTO `locatarios` VALUES ('2', 'Gab ME', null, null, 'suporte@controlnet.com.br', 'Guapimirim', 'RJ', 'Rua Conselheiro', 'Santana', '02019000', 'ap. 23', '1515151515115', 'Controlnet Sistemas', '1');
+INSERT INTO `locatarios` VALUES ('5', 'Apenas um nome', '13123213213', '123123123123', 'asodjaso@odajsosj.com.br', 'Acrelandia', 'AC', 'qweqwewqe', 'eqweqwe', '33123-231', 'eqweq', null, null, '0');
+INSERT INTO `locatarios` VALUES ('6', 'Alguem Fisica', '231123123', '123123123213', 'ipsjpoasjdopj@opsjdapoj.com.br', 'Agua Boa', 'MS', 'eopqwpoejqwopje', 'pojqwpojepoj', '12312-323', 'poqjeopqwjeop', '123123123232', 'Sistemas, T', '0');
+INSERT INTO `locatarios` VALUES ('8', 'ASDD ME', null, null, 'sodoasjdo@odjasodjs.com.br', 'Assis Chateaubriand', 'PB', 'opqwejpoqwejopq', 'qwpoejop', '21323-232', 'qwpoepqowej', '21903712903729', 'Nome Fantasia', '1');
+INSERT INTO `locatarios` VALUES ('9', 'Outra ME', null, null, '123232@23123.2323', 'Angelim', 'PE', 'Aeee', '232323', '23232-332', '2u30', '21312312321', 'wojeowej', '1');
+
+-- ----------------------------
+-- Table structure for `tipo_locacao`
+-- ----------------------------
+DROP TABLE IF EXISTS `tipo_locacao`;
+CREATE TABLE `tipo_locacao` (
+  `id` int(1) NOT NULL,
+  `nome` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of tipo_locacao
+-- ----------------------------
+INSERT INTO `tipo_locacao` VALUES ('0', 'Diária');
+INSERT INTO `tipo_locacao` VALUES ('1', 'Mensal');
 
 -- ----------------------------
 -- Table structure for `tipo_pessoa`
@@ -9925,16 +9955,18 @@ CREATE TABLE `veiculos` (
   `km` int(10) NOT NULL,
   `tipo_combustivel` int(1) NOT NULL,
   `marca_id` int(10) NOT NULL,
+  `alugado` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of veiculos
 -- ----------------------------
-INSERT INTO `veiculos` VALUES ('1', 'Fiesta Rocam', 'EZA-1433', '9bwhe21jx24060963', 'PRETO2', 'SEDAM2', '2006/2002', '60002', '2', '6');
-INSERT INTO `veiculos` VALUES ('2', 'Land Rover', 'BSD-1234', '23iihih23442', 'VERDE ESCURO', 'SUV', '2012/2012', '50000', '2', '6');
-INSERT INTO `veiculos` VALUES ('6', 'Fusca', 'EBA-1234', 'ojfopjj31jopjd', 'Bege', 'Sport', '1979', '300000', '2', '16');
-INSERT INTO `veiculos` VALUES ('8', 'O Veiculo', 'EBA-1111', 'funcionaessamerda', 'Branquinha', 'UnoModelo', '2010', '20000', '2', '8');
+INSERT INTO `veiculos` VALUES ('1', 'Fiesta Rocam', 'EZA-1433', '9bwhe21jx24060963', 'PRETO2', 'SEDAM2', '2006/2002', '60002', '2', '6', '0');
+INSERT INTO `veiculos` VALUES ('2', 'Land Rover', 'BSD-1234', '23iihih23442', 'VERDE ESCURO', 'SUV', '2012/2012', '50000', '2', '6', '0');
+INSERT INTO `veiculos` VALUES ('6', 'Fusca', 'EZA-1212', 'asidjosadjo', 'Branca', 'Sport', '1979', '2000', '1', '16', '1');
+INSERT INTO `veiculos` VALUES ('12', 'Sandero', 'EBA-2010', 'eojrojwjoejw', 'Teste', 'dede', '2010', '30000', '2', '32', '0');
+INSERT INTO `veiculos` VALUES ('14', 'Civic', 'ERV-1233', 'o3joj2o3j2', 'Prata', '2.0 V16', '2011', '30000', '3', '8', '0');
 
 -- ----------------------------
 -- Table structure for `veiculo_marcas`
@@ -9944,7 +9976,7 @@ CREATE TABLE `veiculo_marcas` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of veiculo_marcas
@@ -9956,6 +9988,9 @@ INSERT INTO `veiculo_marcas` VALUES ('10', 'Peugeot');
 INSERT INTO `veiculo_marcas` VALUES ('11', 'Land Rover');
 INSERT INTO `veiculo_marcas` VALUES ('12', 'JAC Motors');
 INSERT INTO `veiculo_marcas` VALUES ('16', 'Volkswagen');
-INSERT INTO `veiculo_marcas` VALUES ('17', 'Nova');
 INSERT INTO `veiculo_marcas` VALUES ('18', 'Chevrolet');
-INSERT INTO `veiculo_marcas` VALUES ('20', 'Gabriel de Vasconcelos Pessoa');
+INSERT INTO `veiculo_marcas` VALUES ('21', 'Mercedes');
+INSERT INTO `veiculo_marcas` VALUES ('22', 'BMW');
+INSERT INTO `veiculo_marcas` VALUES ('23', 'Ferrari');
+INSERT INTO `veiculo_marcas` VALUES ('31', 'Tete');
+INSERT INTO `veiculo_marcas` VALUES ('32', 'Candy');
