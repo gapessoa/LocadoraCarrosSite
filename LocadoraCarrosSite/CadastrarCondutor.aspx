@@ -25,7 +25,7 @@
                 <div class="form-group">
                     <div class="col-sm-12">
                         <asp:Label ID="lblCPF" runat="server" Text="CPF"></asp:Label>
-                        <asp:TextBox ID="txtCPF" runat="server" CssClass="form-control" CausesValidation="True" MaxLength="11" OnTextChanged="txtCPF_TextChanged"></asp:TextBox>
+                        <asp:TextBox ID="txtCPF" runat="server" CssClass="form-control" CausesValidation="True" MaxLength="11"></asp:TextBox>
                         <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Campo obrigatório." ControlToValidate="txtCPF"></asp:RequiredFieldValidator>
                     </div>
                 </div>
