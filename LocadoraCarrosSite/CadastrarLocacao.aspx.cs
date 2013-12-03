@@ -24,11 +24,9 @@ namespace LocadoraCarrosSite
             conn.InsertItem("franquia_dia", txtFranquiaDia.Text);
             conn.InsertItem("diarias_previstas", txtDiariasPrevistas.Text);
             conn.InsertItem("destino", txtDestino.Text);
-            conn.InsertItem("data_saida", Convert.ToDateTime(txtDataSaida.Text).ToString("yyyy-mm-dd"));
+            conn.InsertItem("data_saida", Convert.ToDateTime(txtDataSaida.Text).ToString("yyyy-MM-dd"));
             conn.InsertItem("km_saida", txtKMSaida.Text);
-            conn.InsertItem("dt_devolucao", Convert.ToDateTime(txtDataDevolucao.Text).ToString("yyyy-mm-dd"));
-            conn.InsertItem("km_devolucao", txtKmDevolucao.Text);
-            conn.InsertItem("data_contrato", Convert.ToDateTime(txtDataContrato.Text).ToString("yyyy-mm-dd"));
+            conn.InsertItem("data_contrato", Convert.ToDateTime(txtDataContrato.Text).ToString("yyyy-MM-dd"));
             conn.InsertItem("veiculo_id", txtVeiculoEscolhido.SelectedValue);
             conn.InsertItem("locatario_id", txtLocatario.SelectedValue);
             conn.InsertItem("condutor_id", txtCondutor.SelectedValue);
@@ -51,12 +49,12 @@ namespace LocadoraCarrosSite
             txtDestino.Text = null;
             txtDataSaida.Text = null;
             txtKMSaida.Text = null;
-            txtDataDevolucao.Text = null;
-            txtKmDevolucao.Text = null;
             txtDataContrato.Text = null;
             txtVeiculoEscolhido.SelectedIndex = -1;
             txtLocatario.SelectedIndex = -1;
             txtCondutor.SelectedIndex = -1;
+
+            Response.Redirect("ListarLocacoes.aspx");
         }
     }
 }

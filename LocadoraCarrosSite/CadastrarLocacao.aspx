@@ -74,28 +74,6 @@
             </div>
         </div>
 
-        <div class="panel panel-danger">
-            <div class="panel-heading">
-                <h3 class="panel-title"><b>Dados da Devolução</b> </h3>
-            </div>
-
-            <div class="panel-body">
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <asp:Label ID="lblDevolucao" runat="server" Text="Data de Devolução"></asp:Label>
-                        <asp:TextBox ID="txtDataDevolucao" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <asp:Label ID="lblKmDevolucao" runat="server" Text="KM de Devolução"></asp:Label>
-                        <asp:TextBox ID="txtKmDevolucao" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title"><b>Dados do Contrato</b></h3>
