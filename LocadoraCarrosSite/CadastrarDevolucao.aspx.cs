@@ -51,7 +51,7 @@ namespace LocadoraCarrosSite
 
                 }
             }
-            catch (Exception exc)
+            catch (Exception)
             {
                 this.show_msg("<b>Registre o KM de devolução.</b>");
                 return false;
@@ -65,7 +65,7 @@ namespace LocadoraCarrosSite
                     return false;
                 }
             }
-            catch (Exception ext)
+            catch (Exception)
             {
                 this.show_msg("<b>Registre a data de devolução.</b>");
                 return false;
@@ -125,7 +125,7 @@ namespace LocadoraCarrosSite
 
                 txtTotal.Text = total.ToString();
             }
-            catch (Exception except)
+            catch (Exception)
             {
 
                 this.show_msg("<b>ERRO:</b>\nDigite uma data válida de devolução.");
