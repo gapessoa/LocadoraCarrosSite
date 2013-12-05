@@ -12,6 +12,8 @@ namespace LocadoraCarrosSite
 {
     public partial class CadastrarVeiculo : System.Web.UI.Page
     {
+        private string privatePath = @"C:\Users\Gabriel\Documents\GitHub\LocadoraCarrosDesktop\LocadoraCarrosDesktop\Img\";
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -78,6 +80,7 @@ namespace LocadoraCarrosSite
                     string newName = guid + getExtension;
 
                     FileUploadControl.SaveAs(Server.MapPath("~/img/") + newName);
+                    FileUploadControl.SaveAs(this.privatePath + newName);
 
                     theImage.Src = "~/img/" + newName;
 
