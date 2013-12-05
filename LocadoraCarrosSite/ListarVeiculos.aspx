@@ -11,6 +11,9 @@
                 <PagerSettings Mode="NumericFirstLast" FirstPageText="First" PreviousPageText="Previous" NextPageText="Next" LastPageText="Last" />
                 <Columns>
                     <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
+                    <asp:ImageField DataImageUrlField="Image" DataImageUrlFormatString="img/{0}" HeaderText="Imagem" ReadOnly="True">
+                        <ControlStyle CssClass="img-rounded" Height="117px" Width="117px" />
+                    </asp:ImageField>
                     <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
                     <asp:BoundField DataField="Marca" HeaderText="Marca" SortExpression="Marca" />
                     <asp:BoundField DataField="Placa" HeaderText="Placa" SortExpression="Placa" />
@@ -28,7 +31,7 @@
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="MysqlLocadora" runat="server" ConnectionString="<%$ ConnectionStrings:locadoraConnectionString %>" ProviderName="<%$ ConnectionStrings:locadoraConnectionString.ProviderName %>" SelectCommand="SELECT veiculos.id as ID, veiculos.nome as Nome, veiculo_marcas.nome as Marca,placa as Placa, chassi as Chassi, cor as Cor, modelo as Modelo, ano as Ano, km as Kilometragem, combustivel.nome as Combustivel FROM veiculos JOIN veiculo_marcas ON (veiculos.marca_id = veiculo_marcas.id) JOIN combustivel ON (combustivel.id = veiculos.tipo_combustivel)" DeleteCommand="DELETE FROM veiculos WHERE id=@ID" UpdateCommand="UPDATE veiculos SET nome = @Nome, placa = @Placa, chassi = @Chassi, cor = @Cor, modelo = @Modelo, km = @Kilometragem, tipo_combustivel = @Combustivel, ano = @Ano WHERE id = @ID"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="MysqlLocadora" runat="server" ConnectionString="<%$ ConnectionStrings:locadoraConnectionString %>" ProviderName="<%$ ConnectionStrings:locadoraConnectionString.ProviderName %>" SelectCommand="SELECT veiculos.id as ID, veiculos.nome as Nome, veiculo_marcas.nome as Marca,placa as Placa, chassi as Chassi, cor as Cor, modelo as Modelo, ano as Ano, km as Kilometragem, combustivel.nome as Combustivel, imgfile as Image FROM veiculos JOIN veiculo_marcas ON (veiculos.marca_id = veiculo_marcas.id) JOIN combustivel ON (combustivel.id = veiculos.tipo_combustivel)" DeleteCommand="DELETE FROM veiculos WHERE id=@ID" UpdateCommand="UPDATE veiculos SET nome = @Nome, placa = @Placa, chassi = @Chassi, cor = @Cor, modelo = @Modelo, km = @Kilometragem, tipo_combustivel = @Combustivel, ano = @Ano WHERE id = @ID"></asp:SqlDataSource>
         </div>
     </form>
 

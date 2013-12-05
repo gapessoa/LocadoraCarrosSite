@@ -77,6 +77,9 @@
     <Content Include="CadastrarLocatario.aspx" />
     <Content Include="CadastrarDevolucao.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="img\333f4ba8afe56af2.png" />
+    <Content Include="img\b6a6508fbe7879f6.png" />
+    <Content Include="img\d07526c5b0fce728.png" />
     <Content Include="ListarCondutores.aspx" />
     <Content Include="ListarLocacoes.aspx" />
     <Content Include="ListarLocatarios.aspx" />
