@@ -120,7 +120,7 @@
 
                 <div class="form-group">
                     <div class="col-sm-4">
-                        <img src="qualquercoisa" class="img-rounded" id="theImage" runat="server" width="217" height="248" />
+                        <img src="qualquercoisa" class="img-rounded" id="theImage" runat="server" width="300" height="217" />
                     </div>
                 </div>
             </div>

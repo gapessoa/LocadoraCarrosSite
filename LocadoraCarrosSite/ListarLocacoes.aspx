@@ -19,7 +19,7 @@
                 <asp:BoundField DataField="veiculo_nome" HeaderText="Veículo" SortExpression="veiculo_nome" />
                 <asp:BoundField DataField="data_devolucao" HeaderText="Data de Devolução" SortExpression="data_devolucao" />
                 <asp:BoundField DataField="valor_pago" HeaderText="Valor Pago" SortExpression="valor_pago" />
-                <asp:HyperLinkField DataNavigateUrlFields="id" DataNavigateUrlFormatString="CadastrarDevolucao.aspx?id={0}" HeaderText="Editar" Text="Editar">
+                <asp:HyperLinkField DataNavigateUrlFields="id" DataNavigateUrlFormatString="CadastrarDevolucao.aspx?id={0}" HeaderText="Devolução" Text="Devolução">
                 <ControlStyle CssClass="btn btn-info" />
                 </asp:HyperLinkField>
             </Columns>

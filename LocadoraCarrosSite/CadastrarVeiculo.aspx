@@ -13,7 +13,7 @@
 
         <div class="form-group">
             <div class="col-sm-4">
-                <img src="img/333f4ba8afe56af2.png" class="img-rounded" id="theImage" runat="server" width="217" height="248" />
+                <img src="~/img/default_product_img.png" class="img-rounded" id="theImage" runat="server" width="217" height="248" />
             </div>
         </div>
 
