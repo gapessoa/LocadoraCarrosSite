@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace LocadoraCarrosSite
 {
@@ -38,6 +40,7 @@ namespace LocadoraCarrosSite
             conn.InsertItem("marca_id", marca);
             conn.InsertItem("tipo_combustivel", combustivel);
             conn.InsertItem("km", km);
+            conn.InsertItem("imgfile", hiddenFilename.Value.ToString());
 
             conn.Insert("veiculos");
 
@@ -58,6 +61,45 @@ namespace LocadoraCarrosSite
             txtAno.Text = null;
             txtKm.Text = null;
             txtCombustivel.SelectedIndex = -1;
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            if (FileUploadControl.HasFile)
+            {
+                try
+                {
+                    string filename = System.IO.Path.GetFileName(FileUploadControl.FileName);
+
+                    string getExtension = System.IO.Path.GetExtension(filename);
+
+                    string guid = this.GenerateId();
+
+                    string newName = guid + getExtension;
+
+                    FileUploadControl.SaveAs(Server.MapPath("~/img/") + newName);
+
+                    theImage.Src = "~/img/" + newName;
+
+                    hiddenFilename.Value = newName;
+
+                    //StatusLabel.Text = "Upload status: File uploaded!";
+                }
+                catch (Exception ex)
+                {
+                   // StatusLabel.Text = "Upload status: The file could not be uploaded. The following error occured: " + ex.Message;
+                }
+            }
+        }
+
+        private string GenerateId()
+        {
+            long i = 1;
+            foreach (byte b in Guid.NewGuid().ToByteArray())
+            {
+                i *= ((int)b + 1);
+            }
+            return string.Format("{0:x}", i - DateTime.Now.Ticks);
         }
     }
 }
