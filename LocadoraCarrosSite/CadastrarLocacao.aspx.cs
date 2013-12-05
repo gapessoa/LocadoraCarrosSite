@@ -12,7 +12,7 @@ namespace LocadoraCarrosSite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            theImage.Visible = false;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -55,6 +55,20 @@ namespace LocadoraCarrosSite
             txtCondutor.SelectedIndex = -1;
 
             Response.Redirect("ListarLocacoes.aspx");
+        }
+
+        protected void txtVeiculoEscolhido_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string idVeiculo = txtVeiculoEscolhido.SelectedValue.ToString();
+
+            theConn conn2 = new theConn();
+
+            var rows = conn2.Select("SELECT imgfile FROM veiculos WHERE id = '" + idVeiculo + "'");
+
+            theImage.Src = "~/img/" + rows[0]["imgfile"].ToString();
+
+            theImage.Visible = true;
+
         }
     }
 }

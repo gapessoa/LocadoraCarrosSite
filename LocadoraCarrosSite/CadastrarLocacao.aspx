@@ -111,10 +111,16 @@
                 <div class="form-group">
                     <div class="col-sm-12">
                         <asp:Label ID="lblVeiculoEscolhido" runat="server" Text="Veículo Escolhido"></asp:Label>
-                        <asp:DropDownList ID="txtVeiculoEscolhido" runat="server" CssClass="form-control" DataSourceID="SqlDataSource2" DataTextField="nome" DataValueField="id">
+                        <asp:DropDownList ID="txtVeiculoEscolhido" runat="server" CssClass="form-control" DataSourceID="SqlDataSource2" DataTextField="nome" DataValueField="id" OnSelectedIndexChanged="txtVeiculoEscolhido_SelectedIndexChanged" AutoPostBack="true">
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:locadoraConnectionString %>" ProviderName="<%$ ConnectionStrings:locadoraConnectionString.ProviderName %>" SelectCommand="SELECT id,nome FROM veiculos WHERE alugado = '0'"></asp:SqlDataSource>
                         <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator9" runat="server" ErrorMessage="Campo obrigatório." ControlToValidate="txtVeiculoEscolhido"></asp:RequiredFieldValidator>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4">
+                        <img src="qualquercoisa" class="img-rounded" id="theImage" runat="server" width="217" height="248" />
                     </div>
                 </div>
             </div>
